@@ -1,0 +1,661 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Arsenal SC", serif;
+}
+
+/* Header Styles */
+.head_content{
+    position: relative;
+    display: flex;
+    height: 12vh;
+    justify-content: space-between;
+    background-color: hsl(215, 20%, 95%);
+}
+
+.album_name{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    color: hsl(215, 50%, 10%);
+}
+
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+.nav_utils{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.searchbar{
+    height: 25%;
+    margin: 0.75rem 1.2rem 0.75rem 0.5rem;
+}
+
+#menu_button{
+    margin-right: 2rem;
+}
+
+/* Popout styles */
+#popup{
+    background-color: hsl(203, 11%, 44%);
+    position: fixed;
+    top: 0;
+    left: 75%;
+    margin: 0;
+    height: 100vh;
+    width: 22rem;
+    box-shadow: -0.1rem 0 0.9rem rgba(0, 0, 0, 0.2);
+}
+
+#popup::backdrop {
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.pop_op{
+    color: hsla(220, 20%, 97%, 0.655);
+}
+
+.close_pop:hover {
+    box-shadow: 0.1rem 0.1rem 0.2rem hsla(220, 20%, 60%, 0.466);
+}
+
+.pop_cont_box{
+    display: flex;
+    height: 4rem;
+    border-bottom: 1px solid hsla(220, 20%, 97%, 0.655);
+    align-items: center;
+    padding-left: 1.5rem;
+}
+
+.pop_list{
+    background-color: #65747d;
+    color: hsla(220, 20%, 97%, 0.655);
+}
+
+#options{
+    color: hsla(220, 20%, 97%, 0.655);
+}
+
+.album_songs{
+    color: hsla(220, 20%, 97%, 0.655);
+    font-size: 1rem;
+}
+
+
+/* Main Body Styles */
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    background-color: hsl(220, 20%, 97%);
+}
+
+.main_content{
+    display: flex;
+    flex-direction: column;
+}
+
+.product_info{
+    display: flex;
+}
+
+.song_title{
+    padding-left: 1.5rem;
+}
+
+.heart-container{
+    position: absolute;
+    top: 86%;
+    left: 86%;
+}
+
+.heart-container:hover{
+    cursor: pointer;
+}
+
+.visible{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+/* Main Images */
+.album_imgs{
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    width: 60%;
+    border: none;
+}
+
+.main_pic{
+    display: flex;
+    overflow: hidden;
+    padding: 1rem 3rem 3rem 3rem;
+    position: relative;
+}
+
+.side_pics{
+    display: flex;
+    justify-content: center;
+}
+
+.sm_pic {
+    display: flex;
+    overflow: hidden;
+    padding: 1rem;
+    width: 30%;
+}
+
+.lower_img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 0.1rem solid hsl(34, 21%, 45%);
+}
+
+.lower_img:hover{
+    box-shadow: 0.2rem 0.2rem 0.1rem hsl(35, 22%, 70%);
+    transition: 0.3s ease;
+}
+
+/* Product info styles */
+.album_info{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: space-around;
+    border: none;
+}
+
+.info_sec{
+    margin-right: 2rem;
+    background-color: hsl(213, 22%, 90%);
+    border: 2px solid hsl(202, 12%, 41%)
+}
+
+.info_header{
+    padding-left: 0.25rem;
+    color: hsl(215, 50%, 10%)
+}
+
+.info_paragraph{
+    padding: 0.25rem 1rem 0.5rem 1rem;
+    color: hsl(215, 50%, 10%)
+}
+
+.artisit_name{
+    color: #4a5e69;
+    border: none;
+}
+
+.slightly_right{
+    padding-left: 0.5rem;
+}
+
+/* Divider styles */
+.divider{
+    display: flex;
+    flex-direction: column;
+    height: 9%;
+}
+
+#div_img{
+    width: 100%;
+    object-fit: fill;
+}
+
+/* Song Card Styles */
+.other_songs{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-around;
+}
+
+.song_card{
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    background-color: hsl(215, 20%, 90%);
+    border: 2px solid hsl(202, 12%, 41%);
+    height: 35rem;
+}
+
+.card_pic_container{
+    display: flex;
+    overflow: hidden;
+    padding: 1rem;
+    width: 90%;
+    height: 50%;
+    margin: 0.5rem 1rem 0rem 1rem;
+}
+
+.card_img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.song_card:hover{
+    box-shadow: 0.5rem 0.5rem 1rem hsl(215, 10%, 50%);
+    transition: 0.3s ease;
+}
+
+.song_title{
+    color: hsl(215, 50%, 10%);
+}
+
+.p_buttton{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.song_p{
+    margin: 0.2rem 0.2rem 0.2rem 0.5rem;
+    border: none;
+    color: hsl(215, 50%, 10%);
+}
+
+.visit_song{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.4rem;
+}
+
+/* Linked Music Video */
+.vid_box{
+    display: flex;
+    flex-direction: column;
+}
+
+.music_vid{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.vid_title{
+    margin: 1rem 1rem 1rem 11rem;
+}
+
+/* bento box */
+
+.parent2{
+    display: none;
+}
+.parent3{
+    display: none;
+}
+
+.title{
+    color: hsl(215, 50%, 10%);
+}
+
+.rounded{
+    border-radius: 1rem;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 7px;
+    grid-row-gap: 7px;
+    background-color: hsl(215, 50%, 10%);
+    width: 1200px;
+    height: 666px;
+    border-radius: 1rem;
+    border: 5px solid hsl(215, 50%, 10%);
+    color: hsl(215, 20%, 90%);
+    }
+    
+    .div2 { 
+        grid-area: 1 / 1 / 3 / 2;
+        background-color: hsl(215, 10%, 50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5rem;  
+    }
+    .div3 { 
+        grid-area: 2 / 2 / 4 / 3;
+        background-color: hsl(215, 10%, 50%); 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5rem;   
+    }
+    .div4 { 
+        grid-area: 3 / 8 / 6 / 9;
+        background-color: hsl(215, 10%, 50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;   
+    }
+    .div5 { 
+        grid-area: 4 / 9 / 6 / 10;
+        background-color: hsl(215, 10%, 50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;   
+    }
+    .div6 { 
+        grid-area: 1 / 2 / 2 / 7;
+        background-color: hsl(215, 10%, 50%);
+        display: grid;
+        place-items: center; 
+        font-size: 3rem; 
+    }
+    .div7 { 
+        grid-area: 4 / 2 / 6 / 4;
+        background-color: hsl(215, 10%, 50%);
+        overflow: hidden;  
+    }
+    .album_img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .div8 { 
+        grid-area: 2 / 3 / 4 / 4;
+        background-color: hsl(215, 10%, 50%);
+        font-size: 0.8rem; 
+        padding: 0.5rem; 
+    }
+    .div11 { 
+        grid-area: 3 / 1 / 6 / 2;
+        background-color: hsl(215, 10%, 50%);
+        overflow: hidden;  
+    }
+    .tall_baby{
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        margin-left: -80px;
+    }
+    .div12 { 
+        grid-area: 5 / 4 / 6 / 8;
+        background-color: hsl(215, 10%, 50%);
+        display: grid;
+        place-items: center;
+        font-size: 2.5rem;  
+    }
+    .div13 { 
+        grid-area: 3 / 7 / 5 / 8;
+        background-color: hsl(215, 10%, 50%);
+        font-size: 0.7rem; 
+        padding: 0.5rem;  
+    }
+    .div14 { 
+        grid-area: 1 / 7 / 3 / 10;
+        display: grid;
+        background-color: hsl(215, 10%, 50%);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "pic pic words"
+            "pic pic words";
+        column-gap: 0.3rem; 
+        padding: 0.2rem;
+    }
+    .pic{
+        grid-area: pic;
+        overflow: hidden;
+    }
+    .pic_img{
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        margin-left: -40px;
+        
+    }
+    .words{
+        grid-area: words;
+        font-size: 0.885rem;
+        padding: 0.2rem 0.3rem 0.2rem 0.2rem;
+        background-color: hsl(215, 50%, 10%);
+    }
+    .div15{
+        grid-area: 3 / 9 / 4 /10;
+        background-color: hsl(215, 10%, 50%);
+        overflow: hidden;
+    }
+    .kenny{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    
+
+    .contianer {
+        grid-area: 2 / 4 / 5 / 7;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 1px;
+        grid-row-gap: .2rem;
+        background-color: hsl(215, 10%, 50%);
+        padding: .2rem;
+        }
+        
+            .child1 { 
+                grid-area: 1 / 1 / 4 / 5;
+                background-color: hsl(215, 20%, 95%);
+                overflow: hidden;
+
+            }
+            #center_img{
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+
+            }
+            .child2 { 
+                grid-area: 4 / 1 / 5 / 5;
+                background-color: hsl(215, 50%, 10%);
+                padding: 0.5rem; 
+            }
+
+.parent2 {
+    display: none;
+}                  
+
+@media(max-width: 1200px){
+    .parent2 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        border-radius: 1rem;
+        border: 5px solid hsl(215, 50%, 10%);
+        width: 800px;
+        height: 640px;
+        background-color: hsl(215, 50%, 10%);
+        color: hsl(215, 20%, 90%);
+        }
+            
+        .div1_1 { 
+            grid-area: 2 / 2 / 4 / 5;
+            background-color: hsl(215, 10%, 50%);
+            overflow: hidden; 
+        }
+        .div2_1 { 
+            grid-area: 1 / 2 / 2 / 6;
+            background-color: hsl(215, 10%, 50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+            font-size: 4rem;
+        }
+        .baby_keem{
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 1rem;
+        }
+        .kenny{
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 1rem;
+        }
+        .div3_1 { 
+            grid-area: 4 / 1 / 5 / 5;
+            background-color: hsl(215, 10%, 50%);
+            display: grid;
+            place-items: center; 
+            font-size: 3.75rem;
+        }
+        .div4_1 { 
+            grid-area: 1 / 1 / 4 / 2;
+            background-color: hsl(215, 10%, 50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            line-height: 100%;
+        }
+        .div5_1 { 
+            grid-area: 2 / 5 / 5 / 6;
+            background-color: hsl(215, 10%, 50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem; 
+            line-height: 100%;
+        }
+    
+    .parent{
+        display: none;
+    }
+}
+
+@media (max-width: 805px){
+    .parent{
+        display: none;
+    }
+    .parent2{
+        display: none;
+    }
+    .parent3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        height: 600px;
+        width: 360px;
+        border: 5px solid hsl(215, 50%, 10%);
+        background-color: hsl(215, 50%, 10%);
+        color: hsl(215, 20%, 90%);
+        }
+        
+        .div1_2 { 
+            grid-area: 1 / 1 / 2 / 4;
+            background-color: hsl(215, 10%, 50%);
+            display: grid;
+            place-items: center; 
+            font-size: 2rem;
+        }
+        .div2_2 { 
+            grid-area: 2 / 1 / 4 / 4;
+            background-color: hsl(215, 10%, 50%);
+            overflow: hidden; 
+        }
+        .div3_2 { 
+            grid-area: 4 / 1 / 6 / 3;
+            background-color: hsl(215, 10%, 50%);
+            overflow: hidden; 
+        }
+        .range_bro{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .div4_2 { 
+            grid-area: 4 / 3 / 6 / 4;
+            background-color: hsl(215, 10%, 50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 1rem 1rem 1rem; 
+            font-size: 0.6rem;
+
+        }
+}
+
+/* footer */
+
+.footer_content{
+    display: flex;
+    background-color: #65747d;
+    height: 20rem;
+    flex-direction: column;
+}
+
+.social_info{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.website_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.web_p{
+    color: hsla(220, 20%, 97%, 0.655);
+}
+
+#return_to_top{
+    text-decoration: underline;
+}
