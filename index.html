@@ -20,21 +20,21 @@
         
         <!-- album name -->
         <div class="album_name">
-            <h1 class="text-5xl tracking-in-expand">the melodic blue</h1>
+            <h1 class="text-5xl fade-in">the melodic blue</h1>
         </div>
 
         <!-- navigation tools -->
         <div class="nav_utils">
             <!-- search icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20"><path fill="hsl(215, 50%, 10%)" d="M12.2 13.6a7 7 0 1 1 1.4-1.4l5.4 5.4l-1.4 1.4zM3 8a5 5 0 1 0 10 0A5 5 0 0 0 3 8"/></svg>
+            <svg class="fade-in" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20"><path fill="hsl(215, 50%, 10%)" d="M12.2 13.6a7 7 0 1 1 1.4-1.4l5.4 5.4l-1.4 1.4zM3 8a5 5 0 1 0 10 0A5 5 0 0 0 3 8"/></svg>
             
             <!-- searchbar -->
-            <input class="searchbar" type="text" placeholder="search">
+            <input class="searchbar fade-in" type="text" placeholder="search">
 
             <!-- menu icon -->
             <!-- I asked Chat how to do the code for a popout -->
             <button onclick="document.getElementById('popup').showModal()">
-                <svg id="menu_button" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path fill="hsl(215, 50%, 10%)" d="M1 3v2h18V3zm0 8h18V9H1zm0 6h18v-2H1z"/></svg>
+                <svg class="fade-in" id="menu_button" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path fill="hsl(215, 50%, 10%)" d="M1 3v2h18V3zm0 8h18V9H1zm0 6h18v-2H1z"/></svg>
             </button>
 
             <dialog id="popup">
@@ -93,10 +93,10 @@
                 <div class="album_imgs">
 
                     <!-- product name -->
-                    <h2 class="text-3xl song_title">family ties</h2>
+                    <h2 class="text-3xl song_title fade-in">family ties</h2>
 
                     <!-- Large picture -->
-                    <div class="main_pic">
+                    <div class="main_pic fade-in">
                         <img class="rounded-lg" src="./imgs/mel_blue_cover.jpg" alt="The Melodic Blue Album Cover">
                         
                         <!-- Heavily consulted ChatGPT on how to impliment this -->
@@ -139,12 +139,12 @@
                 <!-- Product information -->
                 <div class="album_info">
 
-                    <div class="info_sec rounded-lg">
+                    <div class="info_sec rounded-lg fade-in">
                         <h3 class="info_header text-2xl">About</h3>
                         <p class="info_paragraph">The song "family ties" was released August 27, 2021 as the fourth single from the album "the meldoic blue". The song recived two nominations at the 2022 Grammy Awards for Best Rap Song and Best Rap Performance. It won the Grammy for Best Rap Performance. The song went platinum 5x in the United States of America.</p>
                     </div>
 
-                    <div class="info_sec rounded-lg">
+                    <div class="info_sec rounded-lg fade-in">
                         <h3 class="info_header text-2xl">Featuring. . . </h3>
                         <span class="artisit_name text-lg slightly_right">Kendrick Lamar</span>
                         <p class="info_paragraph">"Mother**** that album, f*** that single
@@ -156,7 +156,7 @@
                             Let me jump in this b****"</p>
                     </div>
 
-                    <div class="info_sec rounded-lg">
+                    <div class="info_sec rounded-lg fade-in">
                         <h3 class="info_header text-2xl">Iconic Verses</h3>
                         <p class="info_paragraph">"I'm OD in Paris, I'm OD in France
                             I thought that I told you, I need the advance
@@ -224,6 +224,8 @@
                 </div>
                 <h2 class="text-3xl vid_title">family ties music video</h2>
             </div>
+
+            <div class="bento">
 
             <div class="parent">
                 <div class="contianer rounded"> 
@@ -338,6 +340,8 @@
                 <div class="div4_2 rounded"> 
                     <p>The song "family ties" was released August 27, 2021 as the fourth single from the album "the meldoic blue". The song recived two nominations at the 2022 Grammy Awards for Best Rap Song and Best Rap Performance. It won the Grammy for Best Rap Performance. The song went platinum 5x in the United States of America.</p>
                 </div>
+            </div>
+
             </div>
 
         </section>

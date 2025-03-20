@@ -20,7 +20,25 @@
     margin-left: 1rem;
     color: hsl(215, 50%, 10%);
 }
+/* fade in */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    display: grid;
+  }
 
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* animimation one */
 .tracking-in-expand {
 	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 	animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -37,7 +55,7 @@
     100% {
       opacity: 1;
     }
-  }
+}
   @keyframes tracking-in-expand {
     0% {
       letter-spacing: -0.5em;
@@ -49,7 +67,7 @@
     100% {
       opacity: 1;
     }
-  }
+}
   
 
 .nav_utils{
@@ -317,6 +335,13 @@ main{
 }
 
 /* bento box */
+
+.bento{
+    display: flex;
+    justify-content: center;
+
+    margin-top: 3rem;
+}
 
 .parent2{
     display: none;
@@ -658,4 +683,12 @@ main{
 
 #return_to_top{
     text-decoration: underline;
+}
+
+@media (max-width: 1000px){
+
+}
+
+@media (max-width: 500px){
+
 }
