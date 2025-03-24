@@ -123,13 +123,13 @@
 
                     <!-- Small pictures underneath main -->
                     <div class="side_pics">
-                        <div class="sm_pic">
+                        <div class="sm_pic fade-in">
                             <img class="rounded-lg lower_img" src="./imgs/baby_keem_grammy.jpeg" alt="Baby keem with his grammy">
                         </div>
-                        <div class="sm_pic">
+                        <div class="sm_pic fade-in">
                             <img class="rounded-lg lower_img" src="./imgs/kenny_baby.jpeg" alt="kendrick lamar and baby keem">
                         </div>
-                        <div class="sm_pic">
+                        <div class="sm_pic fade-in">
                             <img class="rounded-lg lower_img" src="./imgs/family_ties_mv.jpg" alt="famly ties music video clip">
                         </div>
                     </div>
@@ -183,40 +183,91 @@
             <section class="other_songs">
 
                 <!-- Song card -->
-                <button class="">
+                <button id="card1">
                     <div class="song_card rounded-lg">
-                        <div class="card_pic_container">
-                            <img class="rounded-lg card_img" src="./imgs/trade_usa.png" alt="The Melodic Blue Album Cover">
+                        <div id="song1" class="visible_card">
+                            <div class="card_pic_container">
+                                <img class="rounded-lg card_img" src="./imgs/trade_usa.png" alt="The Melodic Blue Album Cover">
+                            </div>
+                            <h2 class="text-xl font-bold song_title">trademark usa</h2>
                         </div>
-                        <h2 class="text-xl font-bold song_title">trademark usa</h2>
-                        <!-- I asked ChatGPT to generate these summaries -->
-                        <p class="song_p">"Trademark USA" is the opening track of Baby Keem’s 2021 album The Melodic Blue. The song features an evolving beat, switching from an introspective tone to high-energy flows. Keem reflects on his rise to fame, personal struggles, and newfound success, delivering raw lyrics with his signature unpredictable delivery. The track sets the tone for the album, showcasing his versatility and unique artistic style.</p>
+                        <div id="description1" class="hidden">
+                            <!-- I asked ChatGPT to generate these summaries -->
+                            <p class="song_p">"Trademark USA" is the opening track of Baby Keem’s 2021 album The Melodic Blue. The song features an evolving beat, switching from an introspective tone to high-energy flows. Keem reflects on his rise to fame, personal struggles, and newfound success, delivering raw lyrics with his signature unpredictable delivery. The track sets the tone for the album, showcasing his versatility and unique artistic style.</p>
+                        </div>
                     </div>
                 </button>
 
+                <script>
+                    document.getElementById("card1").addEventListener("click", function() {
+                        let song = document.getElementById("song1");
+                        let description = document.getElementById("description1");
+                        
+                        song.classList.toggle("hidden");
+                        song.classList.toggle("visible_card");
+
+                        description.classList.toggle("hidden");
+                        description.classList.toggle("visible_card");
+                    });
+                </script>
+
                 <!-- Song card -->
-                <button class="">
+                <button id="card2">
                     <div class="song_card rounded-lg">
-                        <div class="card_pic_container">
-                            <img class="rounded-lg card_img" src="./imgs/range_brothers.jpg" alt="The Melodic Blue Album Cover">
+                        <div id="song2" class="visible_card">
+                            <div class="card_pic_container">
+                                <img class="rounded-lg card_img" src="./imgs/range_brothers.jpg" alt="The Melodic Blue Album Cover">
+                            </div>
+                            <h2 class="text-xl font-bold song_title">range brothers</h2>
                         </div>
-                        <h2 class="text-xl font-bold song_title">range brothers</h2>
-                        <!-- I asked ChatGPT to generate these summaries -->
-                        <p class="song_p">"Range Brothers" by Baby Keem, featuring Kendrick Lamar, is a track from Keem’s 2021 album The Melodic Blue. The song is known for its unconventional structure, shifting beats, and distinct vocal deliveries. It explores themes of success, family, and resilience, with verses exchanged in a theatrical manner. The song gained attention for its unique ad-libs and the now-iconic "top of the morning" repetition by Kendrick in the latter half.</p>
+                        <div id="description2" class="hidden">
+                            <!-- I asked ChatGPT to generate these summaries -->
+                            <p class="song_p">"Range Brothers" by Baby Keem, featuring Kendrick Lamar, is a track from Keem’s 2021 album The Melodic Blue. The song is known for its unconventional structure, shifting beats, and distinct vocal deliveries. It explores themes of success, family, and resilience, with verses exchanged in a theatrical manner. The song gained attention for its unique ad-libs and the now-iconic "top of the morning" repetition by Kendrick in the latter half.</p>
+                        </div>
                     </div>
                 </button>
-                
+
+                <script>
+                    document.getElementById("card2").addEventListener("click", function() {
+                        let song2 = document.getElementById("song2");
+                        let description2 = document.getElementById("description2");
+                        
+                        song2.classList.toggle("hidden");
+                        song2.classList.toggle("visible_card");
+
+                        description2.classList.toggle("hidden");
+                        description2.classList.toggle("visible_card");
+                    });
+                </script>
+
                 <!-- Song card -->
-                <button class="">
+                <button id="card3">
                     <div class="song_card rounded-lg">
-                        <div class="card_pic_container">
-                            <img class="rounded-lg card_img" src="./imgs/16_img.jpg" alt="The Melodic Blue Album Cover">
+                        <div id="song3" class="visible_card">
+                            <div class="card_pic_container">
+                                <img class="rounded-lg card_img" src="./imgs/16_img.jpg" alt="The Melodic Blue Album Cover">
+                            </div>
+                            <h2 class="text-xl font-bold song_title">16</h2>
                         </div>
-                        <h2 class="text-xl font-bold song_title">16</h2>
-                        <!-- I asked ChatGPT to generate these summaries -->
-                        <p class="song_p">"16" is the closing track on Baby Keem’s 2021 album The Melodic Blue. The song features a melancholic and dreamy production, with Keem delivering introspective lyrics about love, heartbreak, and emotional struggles. His melodic flow and vulnerable tone contrast with the more energetic tracks on the album, making "16" a reflective and atmospheric finale.</p>
+                        <div id="description3" class="hidden">
+                            <!-- I asked ChatGPT to generate these summaries -->
+                            <p class="song_p">"16" is the closing track on Baby Keem’s 2021 album The Melodic Blue. The song features a melancholic and dreamy production, with Keem delivering introspective lyrics about love, heartbreak, and emotional struggles. His melodic flow and vulnerable tone contrast with the more energetic tracks on the album, making "16" a reflective and atmospheric finale.</p>
+                        </div>
                     </div>
                 </button>
+
+                <script>
+                    document.getElementById("card3").addEventListener("click", function() {
+                        let song3 = document.getElementById("song3");
+                        let description3 = document.getElementById("description3");
+                        
+                        song3.classList.toggle("hidden");
+                        song3.classList.toggle("visible_card");
+
+                        description3.classList.toggle("hidden");
+                        description3.classList.toggle("visible_card");
+                    });
+                </script>
 
             </section>
             

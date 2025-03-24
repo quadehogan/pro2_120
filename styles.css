@@ -269,19 +269,19 @@ main{
 
 .song_card{
     display: flex;
-    width: 25%;
+    width: 20rem;
     flex-direction: column;
     background-color: hsl(215, 20%, 90%);
     border: 2px solid hsl(202, 12%, 41%);
-    height: 35rem;
+    height: auto;
 }
 
 .card_pic_container{
     display: flex;
     overflow: hidden;
     padding: 1rem;
-    width: 90%;
-    height: 50%;
+    width: 18rem;
+    height: 25rem;
     margin: 0.5rem 1rem 0rem 1rem;
 }
 
@@ -294,10 +294,12 @@ main{
 .song_card:hover{
     box-shadow: 0.5rem 0.5rem 1rem hsl(215, 10%, 50%);
     transition: 0.3s ease;
+    cursor: pointer;
 }
 
 .song_title{
     color: hsl(215, 50%, 10%);
+    margin-bottom: 2rem;
 }
 
 .p_buttton{
@@ -307,15 +309,15 @@ main{
 }
 
 .song_p{
-    margin: 0.2rem 0.2rem 0.2rem 0.5rem;
+    margin: 6rem 0.5rem 0.2rem 0.5rem;
     border: none;
     color: hsl(215, 50%, 10%);
 }
 
-.visit_song{
+.visible_card{
     display: flex;
-    justify-content: flex-end;
-    margin: 0.4rem;
+    flex-direction: column;
+    height: 30rem;
 }
 
 /* Linked Music Video */
