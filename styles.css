@@ -5,21 +5,35 @@
     font-family: "Arsenal SC", serif;
 }
 
+:root{
+    --dark-blue: hsl(215, 50%, 10%);
+    --dark-white: hsl(215, 20%, 95%);
+    --gray-blue: hsl(203, 11%, 44%);
+    --almost-white: hsl(220, 20%, 97%);
+    --light-gray-blue: hsl(213, 22%, 90%);
+    --blue-box-shadow: hsl(215, 10%, 50%);
+}
+
 /* Header Styles */
 .head_content{
     position: relative;
     display: flex;
     height: 12vh;
     justify-content: space-between;
-    background-color: hsl(215, 20%, 95%);
+    background-color: var(--dark-white);
 }
 
 .album_name{
     display: flex;
     align-items: center;
     margin-left: 1rem;
-    color: hsl(215, 50%, 10%);
+    color: var(--dark-blue);
 }
+
+.album_name_words{
+    font-size: 48px;
+}
+
 /* fade in */
 .fade-in {
     opacity: 0;
@@ -83,11 +97,13 @@
 
 #menu_button{
     margin-right: 2rem;
+    height: 40px;
+    width: 40px;
 }
 
 /* Popout styles */
 #popup{
-    background-color: hsl(203, 11%, 44%);
+    background-color: var(--gray-blue);
     position: fixed;
     top: 0;
     left: 75%;
@@ -103,6 +119,7 @@
 
 .pop_op{
     color: hsla(220, 20%, 97%, 0.655);
+    font-size: 18px;
 }
 
 .close_pop:hover {
@@ -120,6 +137,11 @@
 .pop_list{
     background-color: #65747d;
     color: hsla(220, 20%, 97%, 0.655);
+    font-size: 18px;
+}
+
+.pop_options{
+    font-size: 18px;
 }
 
 #options{
@@ -140,7 +162,7 @@ body{
 
 main{
     display: flex;
-    background-color: hsl(220, 20%, 97%);
+    background-color: var(--almost-white);
 }
 
 .main_content{
@@ -152,8 +174,9 @@ main{
     display: flex;
 }
 
-.song_title{
+.main_song{
     padding-left: 1.5rem;
+    font-size: 30px;
 }
 
 .heart-container{
@@ -172,6 +195,11 @@ main{
 
 .hidden{
     display: none;
+}
+
+.prod_title_img{
+    display: flex;
+    flex-direction: column;
 }
 
 /* Main Images */
@@ -206,11 +234,11 @@ main{
     width: 100%;
     height: auto;
     object-fit: cover;
-    border: 0.1rem solid hsl(34, 21%, 45%);
+    border: 0.1rem solid var(--dark-blue);
 }
 
 .lower_img:hover{
-    box-shadow: 0.2rem 0.2rem 0.1rem hsl(35, 22%, 70%);
+    box-shadow: 0.2rem 0.2rem 0.1rem var(--blue-box-shadow);
     transition: 0.3s ease;
 }
 
@@ -225,22 +253,22 @@ main{
 
 .info_sec{
     margin-right: 2rem;
-    background-color: hsl(213, 22%, 90%);
-    border: 2px solid hsl(202, 12%, 41%)
+    background-color: var(--light-gray-blue);
+    border: 2px solid var(--dark-blue);
 }
 
 .info_header{
     padding-left: 0.25rem;
-    color: hsl(215, 50%, 10%)
+    color: var(--dark-blue);
 }
 
 .info_paragraph{
     padding: 0.25rem 1rem 0.5rem 1rem;
-    color: hsl(215, 50%, 10%)
+    color: var(--dark-blue);
 }
 
 .artisit_name{
-    color: #4a5e69;
+    color: var(--gray-blue);
     border: none;
 }
 
@@ -271,7 +299,7 @@ main{
     display: flex;
     width: 20rem;
     flex-direction: column;
-    background-color: hsl(215, 20%, 90%);
+    background-color: var(--light-gray-blue);
     border: 2px solid hsl(202, 12%, 41%);
     height: auto;
 }
@@ -292,7 +320,7 @@ main{
 }
 
 .song_card:hover{
-    box-shadow: 0.5rem 0.5rem 1rem hsl(215, 10%, 50%);
+    box-shadow: 0.5rem 0.5rem 1rem var(--blue-box-shadow);
     transition: 0.3s ease;
     cursor: pointer;
 }
@@ -341,7 +369,7 @@ main{
 
 
 .song_title{
-    color: hsl(215, 50%, 10%);
+    color: var(--dark-blue);
     margin-bottom: 2rem;
 }
 
@@ -354,7 +382,7 @@ main{
 .song_p{
     margin: 6rem 0.5rem 0.2rem 0.5rem;
     border: none;
-    color: hsl(215, 50%, 10%);
+    color: var(--dark-blue);
 }
 
 .visible_card{
@@ -375,8 +403,15 @@ main{
     margin-top: 5rem;
 }
 
+.actual_vid{
+    width: 1120px;
+    height: 630px;
+}
+
 .vid_title{
     margin: 1rem 1rem 1rem 11rem;
+    font-size: 30px;
+    color: var(--dark-blue);
 }
 
 /* bento box */
@@ -395,10 +430,6 @@ main{
     display: none;
 }
 
-.title{
-    color: hsl(215, 50%, 10%);
-}
-
 .rounded{
     border-radius: 1rem;
 }
@@ -409,11 +440,11 @@ main{
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 7px;
     grid-row-gap: 7px;
-    background-color: hsl(215, 50%, 10%);
+    background-color: var(--dark-blue);
     width: 1200px;
     height: 666px;
     border-radius: 1rem;
-    border: 5px solid hsl(215, 50%, 10%);
+    border: 5px solid var(--dark-blue);
     color: hsl(215, 20%, 90%);
     }
     
@@ -473,7 +504,7 @@ main{
     .div8 { 
         grid-area: 2 / 3 / 4 / 4;
         background-color: hsl(215, 10%, 50%);
-        font-size: 0.8rem; 
+        font-size: 0.75rem; 
         padding: 0.5rem; 
     }
     .div11 { 
@@ -485,7 +516,6 @@ main{
         height: 100%;
         width: auto;
         object-fit: cover;
-        margin-left: -80px;
     }
     .div12 { 
         grid-area: 5 / 4 / 6 / 8;
@@ -497,7 +527,7 @@ main{
     .div13 { 
         grid-area: 3 / 7 / 5 / 8;
         background-color: hsl(215, 10%, 50%);
-        font-size: 0.7rem; 
+        font-size: 0.65rem; 
         padding: 0.5rem;  
     }
     .div14 { 
@@ -520,12 +550,10 @@ main{
         width: auto;
         height: 100%;
         object-fit: cover;
-        margin-left: -40px;
-        
     }
     .words{
         grid-area: words;
-        font-size: 0.885rem;
+        font-size: 0.855rem;
         padding: 0.2rem 0.3rem 0.2rem 0.2rem;
         background-color: hsl(215, 50%, 10%);
     }
@@ -694,7 +722,7 @@ main{
             display: flex;
             justify-content: space-between;
             padding: 0.5rem 1rem 1rem 1rem; 
-            font-size: 0.6rem;
+            font-size: 0.55rem;
 
         }
 }
@@ -731,9 +759,207 @@ main{
 }
 
 @media (max-width: 1000px){
+    .head_content{
+        width: 1000px;
+    }
+    .product_info{
+        flex-direction: column;
+    }
+    .album_imgs{
+        flex-direction: row;
+    }
+    .main_pic{
+        width: 600px;
+    }
+    .heart-container{
+        top: 83%;
+        left: 83%;
+    }
+    .side_pics{
+        flex-direction: column;
+        justify-content: space-around;
+        padding-left: 3rem;
+    }
+    .sm_pic{
+        width: 250px;
+        height: 200px
+    }
+    .album_info{
+        flex-direction: row;
+        width: 1000px;
+        padding-left: 1.5rem;
+    }
+    .info_sec{
+        width: 300px;
+    }
+    #div_img{
+        width: 1000px;
+    }
+    .other_songs{
+        width: 1000px;
+    }
+    .song_card{
+        width: 300px;
+    }
+    .card_pic_container{
+        width: 270px;
+        padding: 10px;
+        margin: 10px;
+    }
+    .song_title{
+        padding-left: 0.75rem;
+    }
+    .actual_vid{
+        width: 900px;
+        height: 506px
+    }
+    .vid_title{
+        margin: 1rem 1rem 1rem 5rem;
+    }
+    .parent2{
+        margin-bottom: 40px;
+    }
+    #popup{
+        width: 400px;
+        left: 60%;
+    }
+    .pop_list{
+        font-size: 16px;
+    }
+    .pop_options{
+        font-size: 16px;
+    }
+    .pop_op{
+        font-size: 16px;
+    }
+    .pop_cont_box{
+        height: 3.5rem;
+    }
 
 }
 
 @media (max-width: 500px){
+    .head_content{
+        width: 500px;
+    }
+    .album_name_words{
+        font-size: 20px;
+    }
+    #menu_button{
+        margin-right: 0.5rem;
+        height: 20px
+    }
+    .searchbar{
+        height: 25%;
+        margin: 0.75rem 0.5rem 0.75rem 0.5rem;
+    }
+    .product_info{
+        flex-direction: column;
+    }
+    .album_imgs{
+        flex-direction: column;
+        width: 500px;
+        margin: 0;
+        padding: 5px, 0px, 0px, 0px;
+        align-items: center;
+    }
+    .main_song{
+        font-size: 18px;
+    }
+    .main_pic{
+        width: 400px;
+    }
+    .heart-container{
+        top: 76%;
+        left: 78%;
+    }
+    #heartOutline{
+        width: 30px;
+    }
+    #heartFilled{
+        width: 30px;
+    }
+    .side_pics{
+        flex-direction: row;
+        justify-content: space-around;
+        width: 500px;
+        padding: 0;
+        margin: 0;
+    }
+    .sm_pic{
+        width: 150px;
+        height: 200px
+    }
+    .album_info{
+        flex-direction: column;
+        width: 500px;
+        padding-left: 1.5rem;
+        align-items: center;
+        justify-content: space-around;
+        height: 700px;
+    }
+    .info_sec{
+        width: 400px;
+    }
+    #div_img{
+        width: 500px;
+    }
+    .other_songs{
+        display: flex;
+        width: 500px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        margin-bottom: 20px;
+    }
+    .song_card{
+        width: 300px;
+    }
+    .card_pic_container{
+        width: 270px;
+        padding: 10px;
+        margin: 10px;
+    }
+    .actual_vid{
+        width: 400px;
+        height: 226px
+    }
+    .vid_title{
+        margin: 1rem 1rem 1rem 3rem;
+        font-size: 18px;
+    }
+    .parent3{
+        margin-bottom: 20px;
+    }
+    #popup{
+        width: 250px;
+        left: 50%;
+    }
+    .pop_list{
+        font-size: 12px;
+    }
+    .pop_options{
+        font-size: 12px;
+    }
+    .pop_op{
+        font-size: 12px;
+    }
+    .pop_cont_box{
+        height: 3rem;
+    }
+
+}
+
+@media (prefers-color-scheme: dark){
+    .head_content{
+
+    }
+    .album_name{
+
+    }
+    .main{
+        
+    }
 
 }

@@ -20,7 +20,7 @@
         
         <!-- album name -->
         <div class="album_name">
-            <h1 class="text-5xl fade-in">the melodic blue</h1>
+            <h1 class="album_name_words fade-in">the melodic blue</h1>
         </div>
 
         <!-- navigation tools -->
@@ -34,7 +34,7 @@
             <!-- menu icon -->
             <!-- I asked Chat how to do the code for a popout -->
             <button onclick="document.getElementById('popup').showModal()">
-                <svg class="fade-in" id="menu_button" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 20 20"><path fill="hsl(215, 50%, 10%)" d="M1 3v2h18V3zm0 8h18V9H1zm0 6h18v-2H1z"/></svg>
+                <svg class="fade-in" id="menu_button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="hsl(215, 50%, 10%)" d="M1 3v2h18V3zm0 8h18V9H1zm0 6h18v-2H1z"/></svg>
             </button>
 
             <dialog id="popup">
@@ -44,8 +44,8 @@
 
                 <div class="pop_cont">
                     <div class="pop_cont_box">
-                        <label class="pop_list text-lg" for="options">Choose a song:&nbsp</label>
-                            <select class="text-lg" id="options">
+                        <label class="pop_list" for="options">Choose a song:&nbsp</label>
+                            <select class="pop_options" id="options">
                                 <option class="album_songs" value="option1">family ties</option>
                                 <option class="album_songs" value="option2">trademark usa</option>
                                 <option class="album_songs" value="option3">pink panties</option>
@@ -65,16 +65,16 @@
                             </select>
                     </div>
                     <div class="pop_cont_box">
-                        <a href="#"><h2 class="pop_op text-xl">Albums</h2></a>
+                        <a href="#"><h2 class="pop_op">Albums</h2></a>
                     </div>
                     <div class="pop_cont_box">
-                        <a href="#"><h2 class="pop_op text-xl">About the Artist</h2></a>
+                        <a href="#"><h2 class="pop_op">About the Artist</h2></a>
                     </div>
                     <div class="pop_cont_box">
-                        <a href="#"><h2 class="pop_op text-xl">Learn More</h2></a>
+                        <a href="#"><h2 class="pop_op">Learn More</h2></a>
                     </div>
                     <div class="pop_cont_box">
-                        <a href="#"><h2 class="pop_op text-xl">Our Mission</h2></a>
+                        <a href="#"><h2 class="pop_op">Our Mission</h2></a>
                     </div>
                 </div>
             </dialog>
@@ -90,35 +90,37 @@
             <section class="product_info">
 
                 <!-- product pictures -->
-                <div class="album_imgs">
+                <div class="album_imgs"> 
 
-                    <!-- product name -->
-                    <h2 class="text-3xl song_title fade-in">family ties</h2>
+                    <div class="prod_title_img">
+                        <!-- product name -->
+                        <h2 class="main_song fade-in">family ties</h2>
 
-                    <!-- Large picture -->
-                    <div class="main_pic fade-in">
-                        <img class="rounded-lg" src="./imgs/mel_blue_cover.jpg" alt="The Melodic Blue Album Cover">
-                        
-                        <!-- Heavily consulted ChatGPT on how to impliment this -->
-                        <button id="heartButton" class="heart-container">
-                            <svg id="heartOutline" class="visible heart-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path fill="hsl(220, 20%, 97%)" stroke="hsl(220, 20%, 97%)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 21l-8.8-8.3A5.6 5.6 0 1 1 12 6a5.6 5.6 0 1 1 8.9 6.6z"/>
-                            </svg>
-                            <svg id="heartFilled" class="hidden heart-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path fill="rgb(255, 0, 0)" stroke="rgb(255, 0, 0)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 21l-8.8-8.3A5.6 5.6 0 1 1 12 6a5.6 5.6 0 1 1 8.9 6.6z"/>
-                            </svg>
-                        </button>
-                        
-                        <script>
-                            document.getElementById("heartButton").addEventListener("click", function() {
-                                let outline = document.getElementById("heartOutline");
-                                let filled = document.getElementById("heartFilled");
-                                
-                                outline.classList.toggle("hidden");
-                                outline.classList.toggle("visible");
-    
-                                filled.classList.toggle("hidden");
-                                filled.classList.toggle("visible");
-                            });
-                        </script>
+                        <!-- Large picture -->
+                        <div class="main_pic fade-in">
+                            <img class="rounded-lg" src="./imgs/mel_blue_cover.jpg" alt="The Melodic Blue Album Cover">
+                            
+                            <!-- Heavily consulted ChatGPT on how to impliment this -->
+                            <button id="heartButton" class="heart-container">
+                                <svg id="heartOutline" class="visible heart-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path fill="hsl(220, 20%, 97%)" stroke="hsl(220, 20%, 97%)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 21l-8.8-8.3A5.6 5.6 0 1 1 12 6a5.6 5.6 0 1 1 8.9 6.6z"/>
+                                </svg>
+                                <svg id="heartFilled" class="hidden heart-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path fill="rgb(255, 0, 0)" stroke="rgb(255, 0, 0)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 21l-8.8-8.3A5.6 5.6 0 1 1 12 6a5.6 5.6 0 1 1 8.9 6.6z"/>
+                                </svg>
+                            </button>
+                            
+                            <script>
+                                document.getElementById("heartButton").addEventListener("click", function() {
+                                    let outline = document.getElementById("heartOutline");
+                                    let filled = document.getElementById("heartFilled");
+                                    
+                                    outline.classList.toggle("hidden");
+                                    outline.classList.toggle("visible");
+        
+                                    filled.classList.toggle("hidden");
+                                    filled.classList.toggle("visible");
+                                });
+                            </script>
+                        </div>
                     </div>
 
                     <!-- Small pictures underneath main -->
@@ -183,7 +185,7 @@
             <section class="other_songs">
 
                 <!-- Song card -->
-                <button id="card1">
+                <button id="card1" class="card">
                     <div class="song_card rounded-lg">
                         <div id="song1" class="visible_card">
                             <div class="card_pic_container">
@@ -221,7 +223,7 @@
                 </script>
 
                 <!-- Song card -->
-                <button id="card2">
+                <button id="card2" class="card">
                     <div class="song_card rounded-lg">
                         <div id="song2" class="visible_card">
                             <div class="card_pic_container">
@@ -259,7 +261,7 @@
                 </script>
 
                 <!-- Song card -->
-                <button id="card3">
+                <button id="card3" class="card">
                     <div class="song_card rounded-lg">
                         <div id="song3" class="visible_card">
                             <div class="card_pic_container">
@@ -301,9 +303,9 @@
             <!-- Linked YouTube Vid -->
             <div class="vid_box">
                 <div class="music_vid">
-                    <iframe width="1120" height="630" class="rounded-lg" src="https://www.youtube.com/embed/v6HBZC9pZHQ?si=rUhfUsbaNTuMQqi9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="rounded-lg actual_vid" src="https://www.youtube.com/embed/v6HBZC9pZHQ?si=rUhfUsbaNTuMQqi9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <h2 class="text-3xl vid_title">family ties music video</h2>
+                <h2 class="vid_title">family ties music video</h2>
             </div>
 
             <div class="bento">
