@@ -160,14 +160,10 @@ body{
     flex-direction: column;
 }
 
-main{
-    display: flex;
-    background-color: var(--almost-white);
-}
-
 .main_content{
     display: flex;
     flex-direction: column;
+    background-color: var(--almost-white)
 }
 
 .product_info{
@@ -177,6 +173,7 @@ main{
 .main_song{
     padding-left: 1.5rem;
     font-size: 30px;
+    color: var(--dark-blue);
 }
 
 .heart-container{
@@ -300,7 +297,7 @@ main{
     width: 20rem;
     flex-direction: column;
     background-color: var(--light-gray-blue);
-    border: 2px solid hsl(202, 12%, 41%);
+    border: 2px solid var(--dark-blue);
     height: auto;
 }
 
@@ -446,6 +443,7 @@ main{
     border-radius: 1rem;
     border: 5px solid var(--dark-blue);
     color: hsl(215, 20%, 90%);
+    margin-bottom: 15px;
     }
     
     .div2 { 
@@ -953,13 +951,54 @@ main{
 
 @media (prefers-color-scheme: dark){
     .head_content{
+        background-color: var(--gray-blue);
+    }
+    .main_content{
+        background-color: var(--dark-blue);
+    }
+    .main_song{
+        color: var(--dark-white);
+    }
+    .lower_img{
+        border-color: var(--almost-white);
+    }
+    .lower_img:hover{
+        border: 0.1rem solid var(--dark-white);
+    }
+    .info_sec{
+        background-color: var(--gray-blue);
+        border-color: var(--dark-white);
+    }
+    .info_paragraph{
+        color: var(--dark-white);
+    }
+    .info_header{
+        color: var(--dark-white);
+    }
+    .artisit_name{
+        color: var(--dark-white);
 
     }
-    .album_name{
+    .song_card{
+        background-color: var(--gray-blue);
+        border-color: var(--dark-white);
+    }
+    .song_card:hover{
+        box-shadow: 0.2rem 0.2rem 1rem var(--light-gray-blue);
 
     }
-    .main{
-        
+    .song_title{
+        color: var(--dark-white);
+    }
+    .song_p{
+        color: var(--dark-white);
+    }
+    .vid_title{
+        color: var(--dark-white);
+    }
+    .parent{
+        background-color: var(--gray-blue);
+        border: 5px solid var(--gray-blue);
     }
 
 }
